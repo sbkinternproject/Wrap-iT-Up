@@ -1,6 +1,7 @@
 import 'package:sbk_ecommerce_app/app_properties.dart';
 import 'package:sbk_ecommerce_app/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:sbk_ecommerce_app/services/wishlistpage_products.dart';
 
 import 'components/shop_item_list.dart';
 
@@ -10,20 +11,7 @@ class WishListPage extends StatefulWidget {
 }
 
 class _WishListPageState extends State<WishListPage> {
-  List<Product> products = [
-    Product('assets/headphones.png',
-        'Boat roackerz 400 On-Ear Bluetooth Headphones', 'description', 45.3),
-    Product('assets/headphones_2.png',
-        'Boat roackerz 100 On-Ear Bluetooth Headphones', 'description', 22.3),
-    Product('assets/headphones_3.png',
-        'Boat roackerz 300 On-Ear Bluetooth Headphones', 'description', 58.3),
-    Product('assets/headphones.png',
-        'Boat roackerz 400 On-Ear Bluetooth Headphones', 'description', 45.3),
-    Product('assets/headphones_2.png',
-        'Boat roackerz 100 On-Ear Bluetooth Headphones', 'description', 22.3),
-    Product('assets/headphones_3.png',
-        'Boat roackerz 300 On-Ear Bluetooth Headphones', 'description', 58.3),
-  ];
+  List<Product> products = WishListProducts().products;
 
   @override
   Widget build(BuildContext context) {

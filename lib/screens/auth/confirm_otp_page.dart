@@ -14,7 +14,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
   @override
   Widget build(BuildContext context) {
     Widget title = Text(
-      'Confirm your OTP',
+      confirmOTPtxt,
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,
